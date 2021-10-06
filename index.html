@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Profile card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    body{
+      background-color: hsl(185, 75%, 39%);
+      width: 1440px;
+      font-family: 'Kumbh Sans', sans-serif;
+    }
+    .container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width:350px;
+      height: 400px;
+      background-color:white;
+      margin: 150px auto;
+      border-radius: 15px;
+      position: relative;
+      overflow: hidden;
+    }
+    .card{
+      width: 350px;
+      height: 350px;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 2.5fr 1fr 0.7fr;
+      grid-template-areas: 
+      "satu"
+      "dua"
+      "tiga";
+    }
+    .card-text{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    span{
+      font-size: 0.8em;
+      font-weight: 400;
+      color: #333;
+    }
+    #span-0 {
+      text-align: center;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .card-text2{
+      text-align: center;
+    }
+    .card-left{
+      margin-left: 50px;
+    }
+    .card-right{
+      margin-right: 50px;
+    }
+    .attribution { font-size: 11px; text-align: center; position: absolute; bottom: 0px;}
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <img src="images/bg-pattern-top.svg" style="position:absolute;top:-500px;left:-500px;z-index:-1">
+  <img src="images/bg-pattern-bottom.svg" style="position:absolute;bottom:-500px;right: -500px;z-index: -1;">
+  <div class="container">
+      <div class="card">
+        <div style="grid:satu;">
+          <img style="position: absolute;top:0; left:0;" src="images/bg-pattern-card.svg" alt="">
+          <img style="z-index:5; position: absolute; left:35%; bottom: 50%; border-radius: 50%; border:5px solid white;" src="images/image-victor.jpg" alt="">
+        </div>
+        <div style="grid:dua;margin-top:160px;">
+          <div class="card-text2">
+            <span id="span-0"><strong>Victor Crest</strong></span> <span> 26</span>
+          <br>
+          <span>
+            London
+          </span>
+          </div>
+          <br>
+        <div class="card-text" style="grid:tiga;margin-top: 50px;">
+          <div class="card-text2 card-left"> 
+            <span id="span-0">
+              <strong>
+                80K
+              </strong>
+            </span>      
+            <br>
+            <span>
+              Followers
+            </span>
+          </div>
+          <div class="card-text2">
+            <span id="span-0">
+              <strong>
+                803K
+              </strong>
+            </span>
+            <br>
+            <span>
+              Likes
+            </span>
+          </div>
+          <div class="card-text2 card-right">
+            <span id="span-0">
+              <strong>
+                1.4K
+              </strong>
+            </span>
+            <br>
+            <span>
+              Photos
+            </span>
+          </div>
+        </div>
+        </div>
+      </div>
+  </div>
+    
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Hendro Agung Setiawan</a>.
+  </div>
+</body>
+</html>
